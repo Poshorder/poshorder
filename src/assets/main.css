@@ -1,0 +1,64 @@
+@import './base.css';
+
+#app {
+  width: var(--max-width);
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+.container {
+  width: 100%;
+  margin: 5% auto ;
+}
+
+.container h2 {
+  text-align: left;
+  font-size: 1.4em;
+  text-transform: capitalize;
+  color: var(--text-color);
+}
+
+.wrapper-category {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 0.5em;
+  margin: 0.7em auto;
+}
+
+.wrapper-category a {
+  text-decoration: none;
+  outline: none;
+  min-width: 20rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3em;
+  border-radius: 0.4em;
+  overflow: hidden;
+  background-color: #d9d9d9;
+  padding: 0.4em;
+}
+
+.wrapper-category a h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--text-color);
+  font-weight: 800;
+}
+.wrapper-category a .img {
+  width: 100%;
+  height: 17rem;
+  overflow: hidden;
+  border-radius: 0.3em;
+}
+.wrapper-category a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+

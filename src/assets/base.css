@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+
+/* semantic color variables for this project */
+:root {
+ 
+  --primary-color: #FFC62D;
+  --secondary-color: #FFE293;
+  --color-background: #f3efef;
+  --text-color: #1C2837;
+  --max-width: min(100%, 1300px);
+  --font-family: 'Inter', sans-serif;
+}
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family: var(--font-family);
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a,
+button {
+  font-family: var(--font-family);
+  text-decoration: none;
+  color: var(--color-text);
+}
