@@ -21,7 +21,7 @@
 .wrapper-category {
   width: 100%;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -29,6 +29,13 @@
   margin: 0.7em auto;
 }
 
+
+@media screen and (max-width: 900px) {
+
+  .wrapper-category {
+    justify-content: left;
+  }
+}
 .wrapper-category a {
   text-decoration: none;
   outline: none;
