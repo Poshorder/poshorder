@@ -3,7 +3,7 @@
     <h2>shop our top categories</h2>
 
     <div class="wrapper-category">
-      <RouterLink to="">
+      <RouterLink :to="{name: 'electronics'}">
         <h3>electronics</h3>
         <div class="img">
           <img src="/src/images/smart-watch.jpg" alt="" />
