@@ -23,6 +23,8 @@
   display: flex;
   justify-content: left;
   align-items: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
   gap: 0.5em;
   margin: 0.7em auto;
 }
@@ -31,6 +33,7 @@
   text-decoration: none;
   outline: none;
   min-width: 20rem;
+  width: 20rem;
   height: 20rem;
   display: flex;
   flex-direction: column;

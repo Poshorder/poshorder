@@ -1,4 +1,5 @@
 <template>
+ <div>
   <header>
     <RouterLink to="" class="site-name">poshorder</RouterLink>
     <nav>
@@ -20,18 +21,40 @@
         </RouterLink>
       </div>
     </div>
+    <button class="open-menu" @click="handleClick"> 
+      <PhList size="30" weight="fill" fill="#252525"/>
+    </button>
   </header>
+  <MobileNavComponent v-if="openMenu"/>
+ </div>
 </template>
 
 <script>
-import { PhShoppingBag, PhUser } from '@phosphor-icons/vue'
+import MobileNavComponent from '@/components/MobilenavComponent.vue'
+
+import { PhShoppingBag, PhUser, PhList } from '@phosphor-icons/vue'
+import { ref } from 'vue';
 
 export default {
   name: 'HeaderComponent',
 
   components: {
     PhUser,
-    PhShoppingBag
+    PhShoppingBag,
+    PhList,
+    MobileNavComponent
+  },
+  setup() {
+    const openMenu = ref(false)
+
+    const handleClick = () => {
+      openMenu.value = !openMenu.value
+ 
+    }
+    return {
+      openMenu,
+      handleClick
+    }
   }
 }
 </script>
@@ -49,6 +72,13 @@ header {
   z-index: 5;
 }
 
+.open-menu {
+  outline: none;
+  background: transparent;
+  border: none;
+  display: none;
+  cursor: pointer;
+}
 .site-name {
   font-size: 1.3em;
   text-decoration: none;
@@ -112,5 +142,21 @@ nav a {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+
+@media screen and (max-width: 700px) {
+
+  nav {
+    display: none;
+  }
+
+  .user-account {
+    display: none;
+  }
+
+  .open-menu {
+ display: block
+}
 }
 </style>

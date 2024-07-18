@@ -1,5 +1,6 @@
 <template>
   <div>
+   
     <HeaderComponentVue />
     <BannerComponentVue />
     <TopCategoriesComponent />
@@ -18,7 +19,9 @@ export default {
     HeaderComponentVue,
     BannerComponentVue,
     TopCategoriesComponent,
-    NewArrivalsComponentVue
+    NewArrivalsComponentVue,
+   
+  
   }
 }
 </script>

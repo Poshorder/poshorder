@@ -72,4 +72,13 @@ export default {
   border-radius: 0.4em;
   font-weight: 700;
 }
+
+
+@media screen and (max-width: 700px) {
+
+  .text h2{
+  display: none;
+  }
+ 
+}
 </style>
