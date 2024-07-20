@@ -1,8 +1,10 @@
 <template>
 <HeaderComponentVue/>
 <main class="category-container">
-
-  <aside>
+  <button class="show-filter" @click="toggleAside">
+    <PhArrowsHorizontal :size="32" />
+  </button>
+  <aside :class="{ show: showAside}">
  <button>
   smartphones
  </button>
@@ -14,21 +16,38 @@
  </button>
   </aside>
 
-  <div class="wrapper">
+  <div class="wrapper" :class="{show_aside: showAside}">
+
     <div class="small-card">
         <RouterLink to="">
           <div class="img-cover">
             <button>
               <PhHeart size="25" weight="fill" fill="#1C2837"/>
             </button>
-            <img src="/src/images/daniel-romero-6V5vTuoeCZg-unsplash.jpg" alt="" />
+            <img src="/src/images/watch-1.jpg" alt="smart watch" />
           </div>
-          <h4>BeatsHeadset</h4>
+          <h4>smartwatch</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </RouterLink>
         <div class="cat">
           <button>add to cart</button>
           <span>HT 1500</span>
+        </div>
+      </div>
+    <div class="small-card">
+        <RouterLink to="">
+          <div class="img-cover">
+            <button>
+              <PhHeart size="25" weight="fill" fill="#1C2837"/>
+            </button>
+            <img src="/src/images/phone-1.jpg" alt="Iphone" />
+          </div>
+          <h4>Iphone 14 pro max</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </RouterLink>
+        <div class="cat">
+          <button>add to cart</button>
+          <span>HT 15000</span>
         </div>
       </div>
     
@@ -39,11 +58,25 @@
 
 <script>
 import HeaderComponentVue from '@/components/HeaderComponent.vue';
+import { PhArrowsHorizontal } from '@phosphor-icons/vue';
+import { ref } from 'vue';
 
 export default {
 
   components: {
     HeaderComponentVue,
+    PhArrowsHorizontal
+  },
+  setup() {
+    const showAside = ref(false);
+
+    const toggleAside = () => {
+      showAside.value = !showAside.value
+    }
+    return {
+      showAside,
+      toggleAside
+    }
   }
 }
 </script>
@@ -53,22 +86,39 @@ export default {
 .category-container {
 
   width: var(--container-width);
-  margin: 7% auto 0;
+  margin: 10% auto 0;
   display: grid;
   grid-template-columns: repeat(12,1fr);
+  position: relative;
+}
+
+.show-filter {
+
+  position: absolute;
+  top: -10%;
 }
 
 .category-container aside {
-
-  grid-column: 1 / 3;
+  grid-column: 1; /* Adjusted to match the initial column span */
+  overflow: hidden;
   max-height: 50vh;
-  display: flex;
+  display: none; /* Default to hidden */
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   gap: 0.8em;
-  padding: 0.7em;
+  /* padding: 0.7em; */ /* Uncomment if you need padding */
+  transition: 0.2s ease-in;
+  margin: 10% 0;
 }
+
+.category-container aside.show {
+  grid-column: 1 / 3; /* Span across columns 1 to 3 when shown */
+  display: flex; /* Display as flex when shown */
+  transition: 0.2s ease-in;
+}
+
+
 
 .category-container aside button {
 
@@ -88,13 +138,38 @@ export default {
 }
 .wrapper {
 
-  grid-column: 3 / 13;
+  grid-column: 1 / 13;
   max-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(auto-fill,minmax(17rem,17rem));
   overflow-y: auto;
+  overflow-x:hidden;
   grid-gap: 1em;
   padding-bottom: 10em;
-  /* overflow-x: auto; */
+  transition: 0.2s ease-out;
+}
+
+
+.wrapper.show_aside {
+  grid-column: 3 / 13;
+  transform: translateX(3em);
+  transition: 0.2s ease-in;
+}
+
+@media screen and (max-width: 900px) {
+
+  .category-container {
+    margin: 15% auto 0;
+  }
+
+
+}
+@media screen and (max-width: 700px) {
+
+  .category-container {
+    margin: 20% auto 0;
+  }
+
+
 }
 </style>
