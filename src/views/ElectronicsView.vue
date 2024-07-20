@@ -87,8 +87,6 @@ export default {
 
   width: var(--container-width);
   margin: 10% auto 0;
-  display: grid;
-  grid-template-columns: repeat(12,1fr);
   position: relative;
 }
 
@@ -142,7 +140,7 @@ export default {
 }
 .wrapper {
 
-  grid-column: 1 / 13;
+  width:100%;
   max-height: 100vh;
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(17rem,17rem));
@@ -156,8 +154,7 @@ export default {
 
 
 .wrapper.show_aside {
-  grid-column: 3 / 13;
-  transform: translateX(1em);
+  transform: translateX(7em);
   transition: 0.2s ease-in;
 }
 
