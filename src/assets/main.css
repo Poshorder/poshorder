@@ -27,7 +27,8 @@
   align-items: center;
   overflow-x: scroll;
   overflow-y: hidden;
-  gap: 1.4em;
+  gap: 1.7em;
+  padding-bottom: 0.7em;
   margin: 0.7em auto;
 }
 
@@ -47,7 +48,8 @@
   gap: 3em;
   border-radius: 0.4em;
   overflow: hidden;
-  background-color: #d9d9d9;
+  background-color: var(--color-background);
+  box-shadow: 0 0 0.8em rgba(183,185,190,0.5);
   padding: 0.4em;
 
 }
