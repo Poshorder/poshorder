@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 .banner {
-  width: min(100%,98%);
+  width: var(--container-width);
   height: 70vh;
   background-image: url('/src/images/banner-img.jpg');
   background-position: center;

@@ -10,6 +10,7 @@
   --color-background: #f3efef;
   --text-color: #1C2837;
   --max-width: min(100%, 1300px);
+  --container-width: min(100%,98%);
   --font-family: 'Inter', sans-serif;
 }
 
@@ -44,4 +45,5 @@ button {
   font-family: var(--font-family);
   text-decoration: none;
   color: var(--color-text);
+  cursor: pointer;
 }

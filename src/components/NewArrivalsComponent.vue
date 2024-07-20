@@ -4,7 +4,7 @@
 
     <div class="wrapper-arrivals">
 
-      <div class="card">
+      <div class="card small-card">
         <RouterLink to="">
           <div class="img-cover">
             <button>
@@ -20,10 +20,7 @@
           <span>HT 1500</span>
         </div>
       </div>
-      
-    
-      
-   
+
     </div>
   </div>
 </template>
@@ -46,96 +43,4 @@ export default {
   gap: 0.7em;
 }
 
-.wrapper-arrivals .card {
-
-  height: 18rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  border: 1px solid rgba(183,185,190,0.5);
-  overflow: hidden;
-  padding: 0.4em;
-}
-
-.wrapper-arrivals .card a {
-  text-transform: capitalize;
-  outline: none;
-}
-
-.wrapper-arrivals .card a .img-cover{
- width: 100%;
- height: 10em;
- position: relative;
- overflow: hidden;
- transition: 0.2s ease-in;
-}
-
-.wrapper-arrivals .card a .img-cover button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: transparent;
-  border: none;
-  z-index: 2;
-  cursor:pointer;
-}
-
-.wrapper-arrivals .card a .img-cover img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  cursor: zoom-in;
-}
-
-.wrapper-arrivals .card a .img-cover img:hover {
-  transform: scale(1.1);
-  transition: 0.2s ease-out;
-}
-
-.wrapper-arrivals .card h4{
-  font-size: 1.2em;
-  font-weight: 700;
-}
-
-.wrapper-arrivals .card p{
-  font-size: 0.8em;
-  margin: 0;
-  text-align: left;
-  word-break: break-all;
-  padding: 0 0 1.5em;
-}
-
-.wrapper-arrivals .card .cat{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
- padding: 0.4/7em;
-}
-
-
-.wrapper-arrivals .card .cat button {
-
-  outline:none;
-  border: none;
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-  padding: 0.8em;
-  border-radius: 0.3em;
-  text-transform: capitalize;
-  cursor:pointer;
-  transition: 0.2s ease-out;
-}
-
-.wrapper-arrivals .card .cat button:hover {
-  background-color: var(--primary-color);
-  transition: 0.2s ease-in;
-}
-
-
-.wrapper-arrivals .card .cat span {
-  font-size: 0.8em;
-  font-weight: 500;
-}
 </style>

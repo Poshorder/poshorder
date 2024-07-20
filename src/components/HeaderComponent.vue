@@ -1,7 +1,7 @@
 <template>
  <div>
   <header>
-    <RouterLink to="" class="site-name">poshorder</RouterLink>
+    <RouterLink :to="{name: 'home'}" class="site-name">poshorder</RouterLink>
     <nav>
       <RouterLink to="#">category</RouterLink>
       <RouterLink to="#">what's new</RouterLink>
