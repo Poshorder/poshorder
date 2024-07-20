@@ -99,22 +99,26 @@ export default {
 }
 
 .category-container aside {
-  grid-column: 1; /* Adjusted to match the initial column span */
+  position: fixed;
+  max-width: 10rem;
+  top: 20%;
+  left: 0;
+  z-index: 4;
   overflow: hidden;
   max-height: 50vh;
-  display: none; /* Default to hidden */
+  transform: translateX(-340rem);
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   gap: 0.8em;
+  border: 1px solid rgba(183,185,190,0.4);
   /* padding: 0.7em; */ /* Uncomment if you need padding */
   transition: 0.2s ease-in;
-  margin: 10% 0;
+  /* margin: 10% 0; */
 }
 
 .category-container aside.show {
-  grid-column: 1 / 3; /* Span across columns 1 to 3 when shown */
-  display: flex; /* Display as flex when shown */
+  transform: translateX(0);
   transition: 0.2s ease-in;
 }
 
@@ -142,6 +146,7 @@ export default {
   max-height: 100vh;
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(17rem,17rem));
+  justify-content: center;
   overflow-y: auto;
   overflow-x:hidden;
   grid-gap: 1em;
@@ -152,7 +157,7 @@ export default {
 
 .wrapper.show_aside {
   grid-column: 3 / 13;
-  transform: translateX(3em);
+  transform: translateX(1em);
   transition: 0.2s ease-in;
 }
 
