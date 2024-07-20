@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 .banner {
-  width: 100%;
+  width: min(100%,98%);
   height: 70vh;
   background-image: url('/src/images/banner-img.jpg');
   background-position: center;
@@ -28,7 +28,6 @@ export default {
   background-attachment: fixed;
   margin: 7% auto 0;
   overflow: hidden;
-  border-radius: 0.5em;
   display: flex;
   justify-content: center;
   align-items: center;

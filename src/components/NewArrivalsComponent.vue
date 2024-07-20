@@ -42,13 +42,13 @@ export default {
   width: 100%;
   margin: 0.7em auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(15rem,15rem));
+  grid-template-columns: repeat(auto-fill,minmax(17rem,17rem));
   gap: 0.7em;
 }
 
 .wrapper-arrivals .card {
 
-  height: fit-content;
+  height: 18rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -122,7 +122,7 @@ export default {
   background-color: var(--secondary-color);
   color: var(--text-color);
   padding: 0.8em;
-  border-radius: 9999px;
+  border-radius: 0.3em;
   text-transform: capitalize;
   cursor:pointer;
   transition: 0.2s ease-out;

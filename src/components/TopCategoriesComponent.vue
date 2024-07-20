@@ -3,23 +3,31 @@
     <h2>shop our top categories</h2>
 
     <div class="wrapper-category">
-      <RouterLink :to="{name: 'electronics'}">
-        <h3>electronics</h3>
+      <RouterLink :to="{ name: 'electronics' }">
         <div class="img">
-          <img src="/src/images/smart-watch.jpg" alt="" />
+          <img src="/src/images/smart-watch.jpg" alt="Smart Watch" />
         </div>
+        <h3>Latest Electronics</h3>
+        <hr>
+        <p>Discover top-notch SmartPhones, SmartWatches, and Headsets</p>
       </RouterLink>
+
       <RouterLink to="">
-        <h3>clothes</h3>
         <div class="img">
-          <img src="/src/images/t-shirts.jpg" alt="" />
+          <img src="/src/images/t-shirts.jpg" alt="T-Shirts" />
         </div>
+        <h3>Stylish Clothing</h3>
+        <hr>
+        <p>Explore top brands like Nike, Adidas, Louis Vuitton, and more...</p>
       </RouterLink>
+
       <RouterLink to="">
-        <h3>shoes</h3>
         <div class="img">
-          <img src="/src/images/shoes-on-floor.jpg" alt="" />
+          <img src="/src/images/shoes-on-floor.jpg" alt="Shoes on Floor" />
         </div>
+        <h3>Trendy Footwear</h3>
+        <hr>
+        <p>Step into style with the latest from Nike, Adidas, Louis Vuitton, and more...</p>
       </RouterLink>
     </div>
   </div>

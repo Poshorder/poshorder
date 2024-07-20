@@ -7,15 +7,17 @@
 }
 
 .container {
-  width: 100%;
+  width: min(100%,98%);
   margin: 10% auto ;
 }
 
 .container h2 {
-  text-align: left;
+  text-align: center;
   font-size: 1.4em;
+  font-weight: 700;
   text-transform: capitalize;
   color: var(--text-color);
+  padding: 1em 0;
 }
 
 .wrapper-category {
@@ -41,17 +43,16 @@
   outline: none;
   min-width: 20rem;
   width: 20rem;
-  height: 20rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  height: fit-content;
   gap: 3em;
   border-radius: 0.4em;
   overflow: hidden;
   background-color: #d9d9d9;
   padding: 0.4em;
+
 }
+
+
 
 .wrapper-category a h3 {
   font-size: 1.2em;
@@ -59,6 +60,19 @@
   text-transform: capitalize;
   color: var(--text-color);
   font-weight: 800;
+  padding: 1em 0;
+}
+
+.wrapper-category a hr {
+
+  width: 40%;
+  height: 0.1em;
+  background-color: rgba(3, 3, 105, 0.1);
+}
+
+.wrapper-category a p {
+
+  padding: 0.2em 0;
 }
 .wrapper-category a .img {
   width: 100%;
@@ -66,9 +80,15 @@
   overflow: hidden;
   border-radius: 0.3em;
 }
-.wrapper-category a img {
+.wrapper-category a .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.2s ease-in;
 }
 
+.wrapper-category a .img img:hover {
+
+  transform: scale(1.1);
+  transition: 0.2s ease-in;
+}
