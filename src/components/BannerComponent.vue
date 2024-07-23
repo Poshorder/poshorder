@@ -2,10 +2,9 @@
   <div class="banner">
     <div class="cat">
       <div class="text">
-        <h2>click, click shop</h2>
-        <span>
-          <img src="/public/poshorder-logo.png" alt="" />
-        </span>
+      <h2>
+        let's shop beyond <br>boundaries
+      </h2>
       </div>
       <RouterLink to="" class="cat-btn">Shop now</RouterLink>
     </div>
@@ -26,12 +25,13 @@ export default {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  margin: 7% auto 0;
+  margin: 0 auto 0;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 300em 0 inset rgba(3, 3, 3, 0.4);
+  border-radius: 55% 45% 52% 48% / 0% 0% 10% 10% ;
 }
 
 .cat {
@@ -76,7 +76,8 @@ export default {
 @media screen and (max-width: 700px) {
 
   .text h2{
-  display: none;
+  /* display: none; */
+  font-size: 7dvw;
   }
  
 }
