@@ -5,7 +5,7 @@
     <div class="wrapper-arrivals">
 
       <div class="card small-card">
-        <RouterLink to="">
+        <RouterLink :to="{name:'checkout', params:{ id: '1234'}}">
           <div class="img-cover">
             <button>
               <PhHeart size="25" weight="fill" fill="#1C2837"/>

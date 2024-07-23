@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import ElectronicsView from '../views/ElectronicsView.vue'
+import HomeView from '@/views/HomeView.vue'
+import ElectronicsView from '@/views/ElectronicsView.vue'
+
+import CheckoutView from '@/views/CheckoutView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -13,6 +15,12 @@ const router = createRouter({
       path: '/electronics',
       name: 'electronics',
       component: ElectronicsView
+    },
+    {
+      path: '/c/:id',
+      name: 'checkout',
+      component: CheckoutView,
+      props: true
     }
   ]
 })
