@@ -2,7 +2,7 @@
 <HeaderComponentVue/>
 <main class="category-container">
   <button class="show-filter" @click="toggleAside">
-    <PhArrowsHorizontal :size="32" />
+    <PhArrowsHorizontal :size="32" fill="#323232"/>
   </button>
   <aside :class="{ show: showAside}">
  <button>
@@ -94,6 +94,10 @@ export default {
 
   position: absolute;
   top: -10%;
+  border:none;
+  border-radius:0.5em;
+  padding:0.3em;
+  background-color: var(--primary-color);
 }
 
 .category-container aside {
@@ -108,8 +112,7 @@ export default {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 0.8em;
-  border: 1px solid rgba(183,185,190,0.4);
+  border-right: 1px solid rgba(183,185,190,0.4);
   /* padding: 0.7em; */ /* Uncomment if you need padding */
   transition: 0.2s ease-in;
   /* margin: 10% 0; */
@@ -124,14 +127,17 @@ export default {
 
 .category-container aside button {
 
-  width: 100%;
+  width: fit-content;
+  background: var(--color-background);
+  box-shadow: 0 0 0.7em rgba(183,185,190,0.7);
   padding: 1em ;
   text-transform: capitalize;
   font-weight: 700;
   text-align: left;
-  background-color: transparent;
   border: none;
-
+  margin: 0.4em 0;
+  border-top-right-radius: 5em;
+  border-bottom-right-radius: 5em;
 }
 
 .category-container aside button:hover {
@@ -170,6 +176,14 @@ export default {
 
   .category-container {
     margin: 20% auto 0;
+  }
+
+
+}
+@media screen and (max-width: 500px) {
+
+  .category-container {
+    margin: 30% auto 0;
   }
 
 
