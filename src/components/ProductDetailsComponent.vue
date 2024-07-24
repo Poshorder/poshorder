@@ -69,10 +69,18 @@ export default {
 }
 
 
+@media screen and (max-width: 900px) {
 
+.product-container {
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+}
 .product-image {
 
-    width: 25rem;
+    width: min(25rem,100%);
     height: 25rem;
     overflow: hidden;
     border-radius: 0.5em;
@@ -93,6 +101,8 @@ export default {
     margin: 0 0.3em;
 }
 
+
+
 .product-details {
 
     height: 100%;
@@ -101,6 +111,14 @@ export default {
     flex-direction: column;
     align-items: flex-start;
     padding: 0 1em;
+}
+
+@media screen and (max-width: 900px) {
+
+.product-details {
+    width: 100%;
+}
+
 }
 .product-details .select {
 
