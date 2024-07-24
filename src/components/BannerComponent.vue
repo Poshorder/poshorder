@@ -2,9 +2,7 @@
   <div class="banner">
     <div class="cat">
       <div class="text">
-      <h2>
-        let's shop beyond <br>boundaries
-      </h2>
+        <h2>let's shop beyond <br />boundaries</h2>
       </div>
       <RouterLink to="" class="cat-btn">Shop now</RouterLink>
     </div>
@@ -31,7 +29,7 @@ export default {
   justify-content: center;
   align-items: center;
   box-shadow: 0 300em 0 inset rgba(3, 3, 3, 0.4);
-  border-radius: 55% 45% 52% 48% / 0% 0% 10% 10% ;
+  border-radius: 55% 45% 52% 48% / 0% 0% 10% 10%;
 }
 
 .cat {
@@ -72,13 +70,10 @@ export default {
   font-weight: 700;
 }
 
-
 @media screen and (max-width: 700px) {
-
-  .text h2{
-  /* display: none; */
-  font-size: 7dvw;
+  .text h2 {
+    /* display: none; */
+    font-size: 7dvw;
   }
- 
 }
 </style>

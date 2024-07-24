@@ -1,39 +1,39 @@
 <template>
- <div>
-  <header>
-    <RouterLink :to="{name: 'home'}" class="site-name">poshorder</RouterLink>
-    <nav>
-      <RouterLink to="#">category</RouterLink>
-      <RouterLink to="#">what's new</RouterLink>
-      <RouterLink to="#">delivery</RouterLink>
-    </nav>
-    <div class="user-account">
-      <div class="account">
-        <RouterLink to="#">
-          <PhUser size="25" weight="fill" />
-          <p>account</p>
-        </RouterLink>
+  <div>
+    <header>
+      <RouterLink :to="{ name: 'home' }" class="site-name">poshorder</RouterLink>
+      <nav>
+        <RouterLink to="#">category</RouterLink>
+        <RouterLink to="#">what's new</RouterLink>
+        <RouterLink to="#">delivery</RouterLink>
+      </nav>
+      <div class="user-account">
+        <div class="account">
+          <RouterLink to="#">
+            <PhUser size="25" weight="fill" />
+            <p>account</p>
+          </RouterLink>
+        </div>
+        <hr />
+        <div class="bag">
+          <RouterLink to="#">
+            <PhShoppingBag size="25" weight="fill" />
+          </RouterLink>
+        </div>
       </div>
-      <hr />
-      <div class="bag">
-        <RouterLink to="#">
-          <PhShoppingBag size="25" weight="fill" />
-        </RouterLink>
-      </div>
-    </div>
-    <button class="open-menu" @click="handleClick"> 
-      <PhList size="30" weight="fill" fill="#252525"/>
-    </button>
-  </header>
-  <MobileNavComponent v-if="openMenu"/>
- </div>
+      <button class="open-menu" @click="handleClick">
+        <PhList size="30" weight="fill" fill="#252525" />
+      </button>
+    </header>
+    <MobileNavComponent v-if="openMenu" />
+  </div>
 </template>
 
 <script>
 import MobileNavComponent from '@/components/MobilenavComponent.vue'
 
 import { PhShoppingBag, PhUser, PhList } from '@phosphor-icons/vue'
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 export default {
   name: 'HeaderComponent',
@@ -49,7 +49,6 @@ export default {
 
     const handleClick = () => {
       openMenu.value = !openMenu.value
- 
     }
     return {
       openMenu,
@@ -144,9 +143,7 @@ nav a {
   cursor: pointer;
 }
 
-
 @media screen and (max-width: 700px) {
-
   nav {
     display: none;
   }
@@ -156,7 +153,7 @@ nav a {
   }
 
   .open-menu {
- display: block
-}
+    display: block;
+  }
 }
 </style>

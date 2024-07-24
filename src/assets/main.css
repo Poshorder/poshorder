@@ -8,7 +8,7 @@
 
 .container {
   width: var(--container-width);
-  margin: 10% auto ;
+  margin: 10% auto;
 }
 
 .container h2 {
@@ -32,9 +32,7 @@
   margin: 0.7em auto;
 }
 
-
 @media screen and (max-width: 900px) {
-
   .wrapper-category {
     justify-content: left;
   }
@@ -49,12 +47,9 @@
   border-radius: 0.4em;
   overflow: hidden;
   background-color: var(--color-background);
-  box-shadow: 0 0 0.8em rgba(183,185,190,0.5);
+  box-shadow: 0 0 0.8em rgba(183, 185, 190, 0.5);
   padding: 0.4em;
-
 }
-
-
 
 .wrapper-category a h3 {
   font-size: 1.2em;
@@ -66,14 +61,12 @@
 }
 
 .wrapper-category a hr {
-
   width: 40%;
   height: 0.1em;
   background-color: rgba(3, 3, 105, 0.1);
 }
 
 .wrapper-category a p {
-
   padding: 0.2em 0;
 }
 .wrapper-category a .img {
@@ -90,67 +83,63 @@
 }
 
 .wrapper-category a .img img:hover {
-
   transform: scale(1.1);
   transition: 0.2s ease-in;
 }
 
-
-
 .small-card {
-
   max-height: 25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  border: 1px solid rgba(183,185,190,0.5);
+  border: 1px solid rgba(183, 185, 190, 0.5);
   overflow: hidden;
   padding: 0.4em;
   border-radius: 0.5em;
 }
 
-.small-card  a {
+.small-card a {
   text-transform: capitalize;
   outline: none;
 }
 
-.small-card  a .img-cover{
- width: 100%;
- height: 15em;
- position: relative;
- overflow: hidden;
- transition: 0.2s ease-in;
+.small-card a .img-cover {
+  width: 100%;
+  height: 15em;
+  position: relative;
+  overflow: hidden;
+  transition: 0.2s ease-in;
 }
 
-.small-card  a .img-cover button {
+.small-card a .img-cover button {
   position: absolute;
   top: 0;
   right: 0;
   background-color: transparent;
   border: none;
   z-index: 2;
-  cursor:pointer;
+  cursor: pointer;
 }
 
-.small-card a .img-cover img{
+.small-card a .img-cover img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   cursor: zoom-in;
   transition: 0.2s ease-out;
 }
-.small-card  a .img-cover img:hover {
+.small-card a .img-cover img:hover {
   transform: scale(1.1);
   transition: 0.2s ease-in;
 }
-.small-card h4{
+.small-card h4 {
   font-size: 1.2em;
   font-weight: 700;
   padding: 0.5em 0;
 }
 
-.small-card  p{
+.small-card p {
   font-size: 0.8em;
   margin: 0;
   text-align: left;
@@ -158,25 +147,23 @@
   padding: 0 0 1.5em;
 }
 
-.small-card .cat{
+.small-card .cat {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
- padding: 0.4/7em;
+  padding: 0.4/7em;
 }
 
-
 .small-card .cat button {
-
-  outline:none;
+  outline: none;
   border: none;
   background-color: var(--secondary-color);
   color: var(--text-color);
   padding: 0.8em;
   border-radius: 0.3em;
   text-transform: capitalize;
-  cursor:pointer;
+  cursor: pointer;
   transition: 0.2s ease-out;
 }
 .small-card .cat button:hover {
@@ -184,7 +171,7 @@
   transition: 0.2s ease-in;
 }
 
-.small-card  .cat span {
+.small-card .cat span {
   font-size: 0.8em;
   font-weight: 500;
 }
