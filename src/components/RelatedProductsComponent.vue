@@ -3,31 +3,18 @@
     <h2>You might like</h2>
 
     <div class="wrapper-arrivals">
-      <div class="card small-card">
-        <RouterLink :to="{ name: 'checkout', params: { id: '1234' } }">
-          <div class="img-cover">
-            <button>
-              <PhHeart size="25" weight="fill" fill="#1C2837" />
-            </button>
-            <img src="/src/images/daniel-romero-6V5vTuoeCZg-unsplash.jpg" alt="" />
-          </div>
-          <h4>BeatsHeadset</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </RouterLink>
-        <div class="cat">
-          <button>add to cart</button>
-          <span>HT 1500</span>
-        </div>
-      </div>
+    <SmallCardsComponent/>
     </div>
   </div>
 </template>
 
 <script>
-import { PhHeart } from '@phosphor-icons/vue'
+import SmallCardsComponent from './SmallCardsComponent.vue';
 export default {
   name: 'ArrivalsComponent',
-  components: { PhHeart }
+  components: {
+    SmallCardsComponent
+  }
 }
 </script>
 

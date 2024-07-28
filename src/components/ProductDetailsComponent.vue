@@ -37,9 +37,6 @@
       </p>
       <div class="action-btns">
         <button class="addto-cart">add to cart</button>
-        <button class="wishList-Btn">
-          <PhHeart weight="fill" size="20" />
-        </button>
         <button class="share-btn">share with friends !</button>
       </div>
     </div>
@@ -47,10 +44,9 @@
 </template>
 
 <script>
-import { PhHeart, PhPlus, PhMinus } from '@phosphor-icons/vue'
+import { PhPlus, PhMinus } from '@phosphor-icons/vue'
 export default {
   components: {
-    PhHeart,
     PhPlus,
     PhMinus
   }
@@ -188,6 +184,8 @@ export default {
 
 .addto-cart {
   background-color: var(--primary-color) !important;
+  padding: 1em 4.7em !important;
+  font-weight: 700;
 }
 .wishList-Btn {
   width: 3em;
