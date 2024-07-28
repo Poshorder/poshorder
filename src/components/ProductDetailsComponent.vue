@@ -2,7 +2,6 @@
   <div class="product-container">
     <div class="product-image">
       <img src="/src/images/daniel-romero-6V5vTuoeCZg-unsplash.jpg" alt="" />
-      <img src="/src/images/daniel-romero-6V5vTuoeCZg-unsplash.jpg" alt="" />
     </div>
     <div class="product-details select">
       <h2>headset v2</h2>
@@ -10,11 +9,11 @@
       <span>ID: 123456</span>
       <div class="select-q select">
         <button>
-          <PhPlus size="20" />
+          <PhMinus size="20" />
         </button>
         <span>1</span>
         <button>
-          <PhMinus size="20" />
+          <PhPlus size="20" />
         </button>
       </div>
       <div class="select-color select">
@@ -73,19 +72,14 @@ export default {
   height: 25rem;
   overflow: hidden;
   border-radius: 0.5em;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  overflow-x: auto;
   padding: 0.5em;
 }
 
 .product-image img {
-  min-width: 100%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 0.5em;
-  margin: 0 0.3em;
 }
 
 .product-details {

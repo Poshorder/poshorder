@@ -23,7 +23,7 @@ export default {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  margin: 0 auto 0;
+  margin: 5% auto 0;
   overflow: hidden;
   display: flex;
   justify-content: center;

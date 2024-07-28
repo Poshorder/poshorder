@@ -1,7 +1,6 @@
 <template>
   <div class="mobile-nav">
     <nav>
-      <RouterLink to="#">category</RouterLink>
       <RouterLink to="#">what's new</RouterLink>
       <RouterLink to="#">delivery</RouterLink>
     </nav>

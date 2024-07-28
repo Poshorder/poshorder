@@ -1,5 +1,4 @@
 <template>
-  <HeaderComponentVue />
   <main class="category-container">
     <button class="show-filter" @click="toggleAside">
       <PhArrowsHorizontal :size="32" fill="#323232" />
@@ -48,13 +47,11 @@
 </template>
 
 <script>
-import HeaderComponentVue from '@/components/HeaderComponent.vue'
 import { PhArrowsHorizontal } from '@phosphor-icons/vue'
 import { ref } from 'vue'
 
 export default {
   components: {
-    HeaderComponentVue,
     PhArrowsHorizontal
   },
   setup() {
