@@ -97,10 +97,8 @@ export default {
   justify-content: flex-start;
   align-items: center;
   border-right: 1px solid rgba(183, 185, 190, 0.4);
-  /* padding: 0.7em; */ /* Uncomment if you need padding */
   transition: 0.2s ease-in;
   padding: 0.3em;
-  /* margin: 10% 0; */
 }
 
 .category-container aside.show {

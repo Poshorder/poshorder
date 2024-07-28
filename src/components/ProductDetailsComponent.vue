@@ -59,6 +59,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: start;
+  border-bottom: 1px solid rgba(183, 185, 190, 0.5);
+  border-radius: 0.4em;
 }
 
 @media screen and (max-width: 900px) {
@@ -68,8 +70,8 @@ export default {
   }
 }
 .product-image {
-  width: min(25rem, 100%);
-  height: 25rem;
+  width: min(30rem, 100%);
+  height: 28rem;
   overflow: hidden;
   border-radius: 0.5em;
   padding: 0.5em;
@@ -99,15 +101,14 @@ export default {
 .product-details .select {
   width: 100%;
   outline: none;
-  margin: 0.6em 0;
+  margin: 0.2em 0;
 }
 
 .product-details .select-q button {
   outline: none;
   background-color: var(--color-background);
   border: 1px solid rgba(183, 185, 190, 0.5);
-  box-shadow: 0 0 0.1em rgba(3, 3, 3, 0.2);
-  padding: 0.7em;
+  padding: 0.4em;
   border-radius: 0.3em;
 }
 
@@ -131,12 +132,15 @@ export default {
   font-weight: 500;
   font-family: var(--font-family);
   outline: none;
+  border: 1px solid rgba(183, 185, 190, 0.5);
+  background-color: var(--color-background);
+  border-radius: 0.3em;
 }
 
 .product-details h2 {
   text-transform: capitalize;
   font-weight: 500;
-  font-size: 3em;
+  font-size: 2.5em;
   color: var(--text-color);
 }
 
