@@ -5,7 +5,6 @@
 </template>
 
 <script>
-
 import ProductDetailsComponentVue from '@/components/ProductDetailsComponent.vue'
 import ProductReviewsComponentVue from '@/components/ProductReviewsComponent.vue'
 import RelatedProductsComponentVue from '@/components/RelatedProductsComponent.vue'

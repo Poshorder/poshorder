@@ -3,13 +3,13 @@
     <h2>You might like</h2>
 
     <div class="wrapper-arrivals">
-    <SmallCardsComponent/>
+      <SmallCardsComponent />
     </div>
   </div>
 </template>
 
 <script>
-import SmallCardsComponent from './SmallCardsComponent.vue';
+import SmallCardsComponent from './SmallCardsComponent.vue'
 export default {
   name: 'ArrivalsComponent',
   components: {

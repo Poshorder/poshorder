@@ -3,7 +3,7 @@
     <h2>Recently added</h2>
 
     <div class="wrapper-arrivals">
-     <SmallCardsComponentVue/>
+      <SmallCardsComponentVue />
     </div>
   </div>
 </template>

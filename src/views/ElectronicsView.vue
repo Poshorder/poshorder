@@ -91,7 +91,7 @@ export default {
   left: 0;
   z-index: 4;
   overflow: hidden;
-  max-height: 50vh;
+  height: 100vh;
   transform: translateX(-340rem);
   flex-direction: column;
   justify-content: flex-start;
@@ -99,6 +99,7 @@ export default {
   border-right: 1px solid rgba(183, 185, 190, 0.4);
   /* padding: 0.7em; */ /* Uncomment if you need padding */
   transition: 0.2s ease-in;
+  padding: 0.3em;
   /* margin: 10% 0; */
 }
 
@@ -108,17 +109,15 @@ export default {
 }
 
 .category-container aside button {
-  width: fit-content;
+  width: 100%;
   background: var(--color-background);
-  box-shadow: 0 0 0.7em rgba(183, 185, 190, 0.7);
   padding: 1em;
   text-transform: capitalize;
   font-weight: 700;
   text-align: left;
   border: none;
   margin: 0.4em 0;
-  border-top-right-radius: 5em;
-  border-bottom-right-radius: 5em;
+  border-bottom: 1px solid rgba(183, 185, 190, 0.4);
 }
 
 .category-container aside button:hover {

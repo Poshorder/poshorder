@@ -2,7 +2,7 @@
   <div class="container">
     <h2>shop our top categories</h2>
 
-    <div class="wrapper-category">
+    <div class="wrapper-category" id="top-categories">
       <RouterLink :to="{ name: 'electronics' }">
         <div class="img">
           <img src="/src/images/smart-watch.jpg" alt="Smart Watch" />

@@ -4,7 +4,7 @@
       <div class="text">
         <h2>let's shop beyond <br />boundaries</h2>
       </div>
-      <RouterLink to="" class="cat-btn">Shop now</RouterLink>
+      <RouterLink to="#top-categories" class="cat-btn">Shop now</RouterLink>
     </div>
   </div>
 </template>

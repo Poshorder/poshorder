@@ -26,7 +26,7 @@
     </header>
     <MobileNavComponent v-if="openMenu" />
   </div>
-  <RouterView/>
+  <RouterView />
 </template>
 
 <script>
@@ -52,15 +52,13 @@ export default {
     }
 
     onMounted(() => {
+      const header = document.querySelector('header')
 
-      const header = document.querySelector('header');
-
-      window.addEventListener('scroll',() => {
+      window.addEventListener('scroll', () => {
         if (window.scrollY > 30) {
           header.classList.add('page-scrolling')
-        }else {
+        } else {
           header.classList.remove('page-scrolling')
-
         }
       })
     })
@@ -84,18 +82,16 @@ header {
   padding: 0.8em;
   z-index: 5;
   transition: 0.2s ease-in;
-  transition-timing-function: cubic-bezier(.11,.4,.92,.67);
- 
+  transition-timing-function: cubic-bezier(0.11, 0.4, 0.92, 0.67);
 }
 
 header.page-scrolling {
   top: 0.5%;
   border-radius: 0.7em;
-  border: 1px solid rgba(183,185,190,0.4);
-  box-shadow: 0 0 0.5em rgba(183,185,190,0.4);
+  border: 1px solid rgba(183, 185, 190, 0.4);
+  box-shadow: 0 0 0.5em rgba(183, 185, 190, 0.4);
   transition: 0.2s ease-in;
-  transition-timing-function: cubic-bezier(.11,.4,.92,.67);
- 
+  transition-timing-function: cubic-bezier(0.11, 0.4, 0.92, 0.67);
 }
 
 .open-menu {
@@ -169,7 +165,7 @@ nav a {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  margin-left:0.5em;
+  margin-left: 0.5em;
 }
 
 @media screen and (max-width: 700px) {
