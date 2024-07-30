@@ -1,12 +1,12 @@
 <template>
   <div class="product-container">
     <div class="product-image">
-      <img src="/src/images/daniel-romero-6V5vTuoeCZg-unsplash.jpg" alt="" />
+      <img :src="itemDetails.url" alt="" />
     </div>
     <div class="product-details select">
-      <h2>headset v2</h2>
-      <h3>$ 20.98</h3>
-      <span>ID: 123456</span>
+      <h2>{{ itemDetails.name }}</h2>
+      <h3>$ {{ itemDetails.price }}</h3>
+      <span>ID: {{ itemDetails.id }}</span>
       <div class="select-q select">
         <button>
           <PhMinus size="20" />
@@ -16,23 +16,9 @@
           <PhPlus size="20" />
         </button>
       </div>
-      <div class="select-color select">
-        <h3>select color:</h3>
-        <select name="" id="">
-          <option value="red">red</option>
-          <option value="blue">blue</option>
-        </select>
-      </div>
-      <div class="select-size select">
-        <h3>select size:</h3>
-        <select name="" id="">
-          <option value="small">small</option>
-          <option value="xl">xl</option>
-        </select>
-      </div>
+    
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, ipsum Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Nulla, voluptates?
+     {{ itemDetails.descriptions }}
       </p>
       <div class="action-btns">
         <button class="addto-cart">add to cart</button>
@@ -44,10 +30,17 @@
 
 <script>
 import { PhPlus, PhMinus } from '@phosphor-icons/vue'
+// import { ref} from "vue"
 export default {
   components: {
     PhPlus,
     PhMinus
+  },
+  props:['itemDetails'],
+  setup(){
+
+  //  const details = ref(props.itemDetails)
+   
   }
 }
 </script>
@@ -85,7 +78,7 @@ export default {
 }
 
 .product-details {
-  height: 100%;
+  height: 28rem;
   display: flex;
   justify-content: start;
   flex-direction: column;
@@ -119,23 +112,6 @@ export default {
   font-weight: 700;
 }
 
-.product-details .select h3 {
-  font-size: 1em;
-  text-transform: capitalize;
-  color: var(--text-color);
-}
-
-.product-details .select select {
-  width: 30%;
-  padding: 0.5em;
-  text-transform: capitalize;
-  font-weight: 500;
-  font-family: var(--font-family);
-  outline: none;
-  border: 1px solid rgba(183, 185, 190, 0.5);
-  background-color: var(--color-background);
-  border-radius: 0.3em;
-}
 
 .product-details h2 {
   text-transform: capitalize;
@@ -151,6 +127,8 @@ export default {
 .product-details p {
   margin: 1em 0;
   width: 30rem;
+  height: 30rem;
+  overflow: scroll;
   word-break: break-all;
   text-align: left;
 }
@@ -165,6 +143,7 @@ export default {
   display: flex;
   justify-content: left;
   align-items: center;
+
 }
 
 .action-btns button {

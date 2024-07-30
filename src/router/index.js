@@ -1,15 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
 import ElectronicsView from '@/views/ElectronicsView.vue'
 
-import CheckoutView from '@/views/CheckoutView.vue'
+
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: () => import('@/views/HomeView.vue')
     },
     {
       path: '/electronics',
@@ -17,9 +17,9 @@ const router = createRouter({
       component: ElectronicsView
     },
     {
-      path: '/c/:id',
+      path: '/checkout/:id',
       name: 'checkout',
-      component: CheckoutView,
+      component: () => import('@/views/CheckoutView.vue'),
       props: true
     }
   ]

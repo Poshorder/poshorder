@@ -1,22 +1,28 @@
 <template>
-  <div class="card small-card">
-    <RouterLink :to="{ name: 'checkout', params: { id: '1234' } }">
-      <div class="img-cover">
-        <img src="/src/images/daniel-romero-6V5vTuoeCZg-unsplash.jpg" alt="" />
-      </div>
-      <h4>BeatsHeadset</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    </RouterLink>
-    <div class="cat">
-      <button>add to cart</button>
-      <span>HT 1500</span>
-    </div>
-  </div>
+ 
 </template>
 
 <script>
+import { onMounted, ref } from "vue";
+import { getData } from "../composables/index"
 export default {
-  name: 'SmallScardsComponent'
+  name: 'SmallScardsComponent',
+  setup() {
+
+  //  const products = ref('[]');
+    const newArrivals = ref('[]');
+
+    onMounted(async () => {
+
+      const results = await getData()
+      const newArrivalsFiltered = await results.filter((d) => d.isNew);
+      newArrivals.value = newArrivalsFiltered
+    });
+
+    return {
+      newArrivals
+    }
+  }
 }
 </script>
 
